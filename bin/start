@@ -2,6 +2,12 @@
 
 set -e
 
+# Used for OAuth2 bypass for production
+if [ -n "${OAUTH2_HTPASSWD:-}" ]; then
+  printf '%s\n' "$OAUTH2_HTPASSWD" | tr ',' '\n' > /tmp/htpasswd
+  export OAUTH2_PROXY_HTPASSWD_FILE=/tmp/htpasswd
+fi
+
 # NOTE: The canonical source for this file is in the metabase/metabase repository.
 # Please update it there then copy to the metabase/metabase-deploy repository.
 
