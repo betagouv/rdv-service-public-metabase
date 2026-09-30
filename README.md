@@ -1,3 +1,8 @@
+Fork de ce qui est proposé par Scalingo avec quelques adaptations pour notre usage :
+- Mise en place de OAuth2 Proxy
+- Ajout d’un petit morceau de script pour mettre en place un fichier HTPASSWD pour faire de HTTP Basic Auth
+
+
 ![Metabase](metabase.png)
 
 # Deploying Metabase to Scalingo
